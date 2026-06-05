@@ -2,16 +2,16 @@ function getLabelFromIRI(iri) {
     try {
         const hashIndex = iri.lastIndexOf('#');
         if (hashIndex !== -1 && hashIndex < iri.length - 1) {
-            // Si un # est trouvé et qu'il n'est pas à la fin, renvoyer ce qui est après
+            // If a '#' is found and it's not at the end, return what comes after it
             return iri.substring(hashIndex + 1);
         }
 
         const slashIndex = iri.lastIndexOf('/');
         if (slashIndex !== -1 && slashIndex < iri.length - 1) {
-            // Si aucun # ou si le # est à la fin, renvoyer ce qui est après le dernier /
+            // If there's no '#' or the '#' is at the end, return what comes after the last '/'
             return iri.substring(slashIndex + 1);
         }
-        // Si aucun / ou # significatif n'est trouvé, retourner l'IRI complet
+        // If no meaningful '/' or '#' is found, return the full IRI
         return iri;
     } catch (error) { console.log(error) }
 }

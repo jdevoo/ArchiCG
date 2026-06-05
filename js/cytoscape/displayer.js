@@ -36,15 +36,14 @@ function getEdgeOptions() {
 }
 
 function handleSlideFullyDisplayed() {
-    // vérifier que le slide actuel doit ou non afficher un graphe
+    // Check whether the current slide should display a graph
     let presentSlide = Reveal.getCurrentSlide();
     console.log(presentSlide)
     let dataGraph = presentSlide ? presentSlide.getAttribute('data-graph') : null;
-    console.log("toto")
     if (dataGraph) {
-        // effacer tous les cy containers du document
+        // Remove all cy containers from the document
         document.querySelectorAll('#cy-container').forEach(element => element.remove());
-        // vérifier que le slide contient content-zone et image-zone ou créer
+        // Check that the slide contains content-zone and image-zone, or create them
         let contentZone = presentSlide.querySelector(".content-zone");
         if (!contentZone) {
             console.log("Missing content-zone as the graph " + dataGraph + "is to be displayed")
@@ -117,7 +116,7 @@ function handleSlideFullyDisplayed() {
         }
     }
 }
-// Attacher l'événement 'slidetransitionend' pour réagir après chaque transition de slide
+// Attach the 'slidetransitionend' event to react after each slide transition
 Reveal.on('slidetransitionend', handleSlideFullyDisplayed);
 
 

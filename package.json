@@ -1,0 +1,20 @@
+{
+  "name": "archicg",
+  "version": "1.0.21",
+  "description": "Interactive Compound Graph viewer and analyzer for ArchiMate / enterprise-architecture models",
+  "private": true,
+  "homepage": "https://nfigay.github.io/archicg/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nfigay/ArchiCG"
+  },
+  "author": "Dr. Nicolas Figay",
+  "license": "SEE LICENSE",
+  "scripts": {
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
+  },
+  "devDependencies": {
+    "eslint": "^10.4.0"
+  }
+}

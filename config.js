@@ -1,6 +1,6 @@
-// dont remove parameters, but complete them accordingly
-// the roles will be used in order to filter the viewpoints you will have access by default
-// your organization, if fitting with organizations in the model, will also be used for parametering some actions on the model
+// Don't remove parameters; complete them according to your profile.
+// The roles will be used to filter the viewpoints you have access to by default.
+// Your organisation, if it matches an organisation in the model, will also be used to configure some actions on the model.
 var configuration={
 name:"Doe",
 firstname:"John",

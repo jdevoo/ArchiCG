@@ -10,6 +10,20 @@
   height: 30px;
 }
 
+html, body {
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+}
+
+.w2ui-menu .w2ui-sub-menu-box:last-child {
+  border-bottom: none;
+}
+
+.w2ui-flat-left, .w2ui-flat-right {
+  transform: rotate(-90deg);
+}
+
 body {
   font-family: helvetica neue, helvetica, liberation sans, arial, sans-serif;
   font-size: 14px;
@@ -42,6 +56,21 @@ table td, table td * {
 
 #cy {
   z-index: 999;
+}
+
+/* Bird's-eye minimap (cytoscape-navigator). It lives in a dedicated column on
+   the left of the Properties (bottom) panel; setupBottomCollapseBar appends
+   #cyNavigator to that panel and shifts the property list/details to its right
+   so nothing overlaps. top clears the 26px bottom bar. */
+#cyNavigator {
+  position: absolute;
+  left: 6px;
+  top: 32px;
+  width: 158px;
+  height: 118px;
+  background: #fff;
+  overflow: hidden;
+  z-index: 1000;
 }
 
 h1 {
@@ -228,10 +257,24 @@ fieldset {
   border-radius: 0px;
   padding: 0px 0px;
   position: relative;
-  width: calc(1000%);
+  width: calc(100%);
   transform: scaleY(1);
-  height: 70px;
+  /* min-height (not height) so sections whose icons wrap onto extra rows grow
+     to fit instead of overflowing and overlapping the next fieldset. */
+  min-height: 70px;
 
+}
+
+/* Match the Palettes panel text to the w2ui font used by the Tools and
+   Properties panels. <legend>/<button>/<input>/<select> don't inherit
+   font-family, so they otherwise fall back to the body/browser-default font
+   and look different from the rest of the UI. */
+#layout_mainLayout_panel_right,
+#layout_mainLayout_panel_right legend,
+#layout_mainLayout_panel_right button,
+#layout_mainLayout_panel_right input,
+#layout_mainLayout_panel_right select {
+  font-family: OpenSans, "helvetica neue", helvetica, "liberation sans", arial, sans-serif;
 }
 
 #palette{

@@ -58,7 +58,7 @@ var zoom = (function(){
 		panUpdateInterval = -1;
 
 	// Check for transform support so that we can fallback otherwise
-	var supportsTransforms = 	'transform' in document.body.style;
+	var supportsTransforms = 'transform' in document.body.style;
 
 	if( supportsTransforms ) {
 		// The easing that will be applied when we zoom in/out

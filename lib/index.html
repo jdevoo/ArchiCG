@@ -6,13 +6,13 @@
     <title>W2UI Layout Example</title>
     
     <!-- Link to the local W2UI CSS file -->
-    <link rel="stylesheet" type="text/css" href="w2ui-2.0.min.css" />
-    
+    <link rel="stylesheet" type="text/css" href="vendor/w2ui-2.0.min.css" />
+
     <!-- Include jQuery (required by W2UI) -->
-    <script src="lib/jquery.min.js"></script>
-    
-    <!-- Include W2UI JavaScript from the local lib folder -->
-    <script src="lib/w2ui-2.0.min.js"></script>
+    <script src="vendor/jquery.min.js"></script>
+
+    <!-- Include W2UI JavaScript from the local vendor folder -->
+    <script src="vendor/w2ui-2.0.min.js"></script>
     
     <style>
         /* Ensure the layout container takes full height */
@@ -32,10 +32,10 @@
             $('#app').w2layout({
                 name: 'layout',
                 panels: [
-                    { type: 'top', size: 50, content: 'Menu Principal' },
-                    { type: 'left', size: 200, content: 'Panneau Outils' },
-                    { type: 'main', content: 'Graphe Cytoscape' },
-                    { type: 'preview', size: 150, content: 'Attributs' },
+                    { type: 'top', size: 50, content: 'Main Menu' },
+                    { type: 'left', size: 200, content: 'Tools Panel' },
+                    { type: 'main', content: 'Cytoscape Graph' },
+                    { type: 'preview', size: 150, content: 'Attributes' },
                     { type: 'bottom', size: 200, content: 'Palette' }
                 ]
             });
