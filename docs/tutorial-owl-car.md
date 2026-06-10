@@ -19,7 +19,7 @@ The OWL exporter writes JSON-LD in a hybrid shape: it emits ArchiCG's reified ed
 
 ## 1. Load the Car
 
-In the top menu choose **Tools → Car**, then click **Load Data Demo** in the Tool panel on the left.
+In the top menu choose **Tools → Car (Tutorial)**, then click **Load Data Demo** in the Tool panel on the left.
 
 The graph now contains **53 nodes** (a `Car`, eight systems beneath it, and dozens of subcomponents) connected by **52 composition edges**. Every node is typed `product`; every edge is typed `composition`.
 
